@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.StrategyPattern"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.StratgyPattern.Tests", "SportHalls.StratgyPattern.Tests\SportHalls.StratgyPattern.Tests.csproj", "{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.TemplatePattern", "SportHalls.TemplatePattern\SportHalls.TemplatePattern.csproj", "{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
