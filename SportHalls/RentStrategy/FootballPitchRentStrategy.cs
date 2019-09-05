@@ -8,7 +8,7 @@ namespace SportHalls.StrategyPattern.RentStrategy
         {
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
 
-            return startDateTime.Hour < 19 ? rentTimeLength * 0.1 : rentTimeLength * 0.05;
+            return startDateTime.Hour <= 19 ? rentTimeLength * 0.1 : rentTimeLength * 0.05;
         }
     }
 }
