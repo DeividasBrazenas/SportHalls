@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.StrategyPattern", "SportHalls\SportHalls.StrategyPattern.csproj", "{7598F8F5-40EA-47A8-863B-828EACA535E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.StrategyPattern", "SportHalls.StrategyPattern\SportHalls.StrategyPattern.csproj", "{7598F8F5-40EA-47A8-863B-828EACA535E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.StratgyPattern.Tests", "SportHalls.StratgyPattern.Tests\SportHalls.StratgyPattern.Tests.csproj", "{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.StrategyPattern.Tests", "SportHalls.StrategyPattern.Tests\SportHalls.StrategyPattern.Tests.csproj", "{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.TemplatePattern", "SportHalls.TemplatePattern\SportHalls.TemplatePattern.csproj", "{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}"
 EndProject

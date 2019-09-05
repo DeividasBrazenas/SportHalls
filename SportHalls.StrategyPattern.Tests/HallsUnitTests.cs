@@ -1,9 +1,8 @@
 using System;
-using SportHalls.StrategyPattern;
 using SportHalls.StrategyPattern.RentStrategy;
 using Xunit;
 
-namespace SportHalls.StratgyPattern.Tests
+namespace SportHalls.StrategyPattern.Tests
 {
     public class HallsUnitTests
     {
