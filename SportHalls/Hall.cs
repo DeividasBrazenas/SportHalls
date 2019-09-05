@@ -3,7 +3,7 @@ using SportHalls.StrategyPattern.RentStrategy;
 
 namespace SportHalls.StrategyPattern
 {
-    public class Hall : IHall
+    public class Hall
     {
         private readonly IRentStrategy _rentStrategy;
 
