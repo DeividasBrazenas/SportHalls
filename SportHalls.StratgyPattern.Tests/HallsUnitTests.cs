@@ -13,7 +13,7 @@ namespace SportHalls.StratgyPattern.Tests
         public void TennisCourtRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             var tennisCourt = new Hall(new TennisCourtRentStrategy());
-            var cost = tennisCourt.CalculateHallRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
+            var cost = tennisCourt.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
             Assert.Equal(expectedCost, cost);
@@ -25,7 +25,7 @@ namespace SportHalls.StratgyPattern.Tests
         public void BasketballHallRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             var basketballHall = new Hall(new BasketballHallRentStrategy());
-            var cost = basketballHall.CalculateHallRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
+            var cost = basketballHall.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
             Assert.Equal(expectedCost, cost);
@@ -37,7 +37,7 @@ namespace SportHalls.StratgyPattern.Tests
         public void FootballPitchRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             var footballPitch = new Hall(new FootballPitchRentStrategy());
-            var cost = footballPitch.CalculateHallRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
+            var cost = footballPitch.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
             Assert.Equal(expectedCost, cost);

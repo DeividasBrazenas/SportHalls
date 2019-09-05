@@ -15,9 +15,9 @@ namespace SportHalls.StrategyPattern
             var endTime = new DateTime(2019, 05, 09, 21, 00, 00);
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
-            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateHallRentCost(startTime, endTime)}");
-            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateHallRentCost(startTime, endTime)}");
-            Console.WriteLine($"Football pitch rent price - {footballPitch.CalculateHallRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Football pitch rent price - {footballPitch.CalculateRentCost(startTime, endTime)}");
 
             Console.WriteLine("----------------------------------------------------------");
 
@@ -25,9 +25,9 @@ namespace SportHalls.StrategyPattern
             endTime = new DateTime(2019, 05, 09, 23, 00, 00);
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
-            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateHallRentCost(startTime, endTime)}");
-            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateHallRentCost(startTime, endTime)}");
-            Console.WriteLine($"Football pitch rent price - {footballPitch.CalculateHallRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Football pitch rent price - {footballPitch.CalculateRentCost(startTime, endTime)}");
 
             Console.ReadKey();
         }

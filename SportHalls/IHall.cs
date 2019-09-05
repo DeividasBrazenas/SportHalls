@@ -4,6 +4,6 @@ namespace SportHalls.StrategyPattern
 {
     public interface IHall
     {
-        double CalculateHallRentCost(DateTime startDateTime, DateTime endDateTime);
+        double CalculateRentCost(DateTime startDateTime, DateTime endDateTime);
     }
 }
