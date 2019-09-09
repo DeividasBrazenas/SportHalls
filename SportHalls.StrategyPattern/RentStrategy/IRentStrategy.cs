@@ -5,5 +5,7 @@ namespace SportHalls.StrategyPattern.RentStrategy
     public interface IRentStrategy
     {
         double CalculateRentCost(DateTime startDateTime, DateTime endDateTime);
+
+        double AdjustCostForMembers(double cost);
     }
 }
