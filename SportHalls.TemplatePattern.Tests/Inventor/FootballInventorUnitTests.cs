@@ -1,8 +1,8 @@
 ﻿using System;
-using SportHalls.StrategyPattern.InventorRent.Football;
+using SportHalls.TemplatePattern.Inventor.Football;
 using Xunit;
 
-namespace SportHalls.StrategyPattern.Tests.Inventor
+namespace SportHalls.TemplatePattern.Tests.Inventor
 {
     public class FootballInventorUnitTests
     {
@@ -11,7 +11,7 @@ namespace SportHalls.StrategyPattern.Tests.Inventor
         [InlineData(21, 30, 23, 00, 2.7)]
         public void FootballRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
-            IRentable football = new InventorRent.Inventor(new FootballRentStrategy());
+            IRentable football = new Football();
             var cost = football.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 

@@ -1,14 +1,12 @@
 ﻿using System;
-using SportHalls.StrategyPattern.RentStrategy;
-using SportHalls.StrategyPattern.RentStrategy.HallRent;
-using SportHalls.StrategyPattern.RentStrategy.HallRent.Basketball;
-using SportHalls.StrategyPattern.RentStrategy.HallRent.Football;
-using SportHalls.StrategyPattern.RentStrategy.HallRent.Tennis;
-using SportHalls.StrategyPattern.RentStrategy.InventorRent;
-using SportHalls.StrategyPattern.RentStrategy.InventorRent.Basketball;
-using SportHalls.StrategyPattern.RentStrategy.InventorRent.Football;
-using SportHalls.StrategyPattern.RentStrategy.InventorRent.Skiing;
-using SportHalls.StrategyPattern.RentStrategy.InventorRent.Tennis;
+using SportHalls.StrategyPattern.HallRent;
+using SportHalls.StrategyPattern.HallRent.Basketball;
+using SportHalls.StrategyPattern.HallRent.Football;
+using SportHalls.StrategyPattern.HallRent.Tennis;
+using SportHalls.StrategyPattern.InventorRent;
+using SportHalls.StrategyPattern.InventorRent.Basketball;
+using SportHalls.StrategyPattern.InventorRent.Football;
+using SportHalls.StrategyPattern.InventorRent.Tennis;
 
 namespace SportHalls.StrategyPattern
 {
@@ -48,8 +46,6 @@ namespace SportHalls.StrategyPattern
 
             IRentable basketball = new Inventor(new BasketballRentStrategy());
             IRentable football = new Inventor(new FootballRentStrategy());
-            IRentable skis = new Inventor(new SkisRentStrategy());
-            IRentable snowboard = new Inventor(new SnowboardRentStrategy());
             IRentable tennisBalls = new Inventor(new TennisBallsRentStrategy());
             IRentable tennisBallsMachine = new Inventor(new TennisBallsMachineRentStrategy());
             IRentable tennisRacket = new Inventor(new TennisRacketRentStrategy());
@@ -61,8 +57,6 @@ namespace SportHalls.StrategyPattern
 
             Console.WriteLine($"Basketball rent price - {basketball.CalculateRentCost(startTime, endTime)}");
             Console.WriteLine($"Football rent price - {football.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Skis rent price - {skis.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Snowboard rent price - {snowboard.CalculateRentCost(startTime, endTime)}");
             Console.WriteLine($"Tennis balls rent price - {tennisBalls.CalculateRentCost(startTime, endTime)}");
             Console.WriteLine($"Tennis balls machine rent price - {tennisBallsMachine.CalculateRentCost(startTime, endTime)}");
             Console.WriteLine($"Tennis racket rent price - {tennisRacket.CalculateRentCost(startTime, endTime)}");

@@ -2,7 +2,7 @@
 
 namespace SportHalls.TemplatePattern.Halls
 {
-    public abstract class Hall
+    public abstract class Hall : IRentable
     {
         public abstract double CalculateSpecificHallRentCost(DateTime startDateTime, DateTime endDateTime);
 
@@ -14,6 +14,5 @@ namespace SportHalls.TemplatePattern.Halls
 
             return AdjustCostForMembers(cost);
         }
-
     }
 }
