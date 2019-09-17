@@ -1,7 +1,8 @@
 using System;
-using SportHalls.StrategyPattern.HallRent.Basketball;
-using SportHalls.StrategyPattern.HallRent.Football;
-using SportHalls.StrategyPattern.HallRent.Tennis;
+using SportHalls.StrategyPattern.AdvertisementStrategies;
+using SportHalls.StrategyPattern.RentStrategies.Halls.Basketball;
+using SportHalls.StrategyPattern.RentStrategies.Halls.Football;
+using SportHalls.StrategyPattern.RentStrategies.Halls.Tennis;
 using Xunit;
 
 namespace SportHalls.StrategyPattern.Tests.Halls
@@ -13,7 +14,7 @@ namespace SportHalls.StrategyPattern.Tests.Halls
         [InlineData(21, 30, 23, 00, 9)]
         public void TennisCourtRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
-            IRentable tennisCourt = new HallRent.Hall(new TennisCourtRentStrategy());
+            IRentable tennisCourt = new Hall(new TennisCourtRentStrategy());
             var cost = tennisCourt.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
@@ -25,7 +26,7 @@ namespace SportHalls.StrategyPattern.Tests.Halls
         [InlineData(21, 30, 23, 00, 9)]
         public void BasketballHallRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
-            IRentable basketballHall = new HallRent.Hall(new BasketballHallRentStrategy());
+            IRentable basketballHall = new Hall(new BasketballHallRentStrategy());
             var cost = basketballHall.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
@@ -37,7 +38,7 @@ namespace SportHalls.StrategyPattern.Tests.Halls
         [InlineData(21, 30, 23, 00, 4.5)]
         public void FootballPitchRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
-            IRentable footballPitch = new HallRent.Hall(new FootballPitchRentStrategy());
+            IRentable footballPitch = new Hall(new FootballPitchRentStrategy());
             var cost = footballPitch.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 

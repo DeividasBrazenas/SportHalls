@@ -1,19 +1,19 @@
 ﻿using System;
 
-namespace SportHalls.StrategyPattern.InventorRent.Tennis
+namespace SportHalls.StrategyPattern.RentStrategies.Halls.Football
 {
-    public class TennisRacketRentStrategy : IRentStrategy
+    public class FootballPitchMemberRentStrategy : IRentStrategy
     {
         public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
 
-            return rentTimeLength * 0.05;
+            return startDateTime.Hour <= 19 ? rentTimeLength * 0.1 : rentTimeLength * 0.05;
         }
 
         public double AdjustCostForMembers(double cost)
         {
-            return cost;
+            return cost * 0.7;
         }
     }
 }

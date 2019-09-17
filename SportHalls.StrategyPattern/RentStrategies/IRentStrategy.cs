@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SportHalls.StrategyPattern
+namespace SportHalls.StrategyPattern.RentStrategies
 {
     public interface IRentStrategy
     {

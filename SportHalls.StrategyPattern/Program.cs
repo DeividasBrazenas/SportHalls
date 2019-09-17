@@ -1,12 +1,11 @@
 ﻿using System;
-using SportHalls.StrategyPattern.HallRent;
-using SportHalls.StrategyPattern.HallRent.Basketball;
-using SportHalls.StrategyPattern.HallRent.Football;
-using SportHalls.StrategyPattern.HallRent.Tennis;
-using SportHalls.StrategyPattern.InventorRent;
-using SportHalls.StrategyPattern.InventorRent.Basketball;
-using SportHalls.StrategyPattern.InventorRent.Football;
-using SportHalls.StrategyPattern.InventorRent.Tennis;
+using SportHalls.StrategyPattern.AdvertisementStrategies;
+using SportHalls.StrategyPattern.RentStrategies.Halls.Basketball;
+using SportHalls.StrategyPattern.RentStrategies.Halls.Football;
+using SportHalls.StrategyPattern.RentStrategies.Halls.Tennis;
+using SportHalls.StrategyPattern.RentStrategies.Inventor.Basketball;
+using SportHalls.StrategyPattern.RentStrategies.Inventor.Football;
+using SportHalls.StrategyPattern.RentStrategies.Inventor.Tennis;
 
 namespace SportHalls.StrategyPattern
 {
@@ -14,9 +13,9 @@ namespace SportHalls.StrategyPattern
     {
         static void Main()
         {
-            IRentable tennisCourt = new Hall(new TennisCourtRentStrategy());
-            IRentable basketballHall = new Hall(new BasketballHallRentStrategy());
-            IRentable footballPitch = new Hall(new FootballPitchRentStrategy());
+            IRentable tennisCourt = new Hall(new TennisCourtRentStrategy(), new AggressiveAdvertisementStrategy());
+            IRentable basketballHall = new Hall(new BasketballHallRentStrategy(), new AggressiveAdvertisementStrategy());
+            IRentable footballPitch = new Hall(new FootballPitchRentStrategy(), new AggressiveAdvertisementStrategy());
 
             var startTime = new DateTime(2019, 05, 09, 19, 00, 00);
             var endTime = new DateTime(2019, 05, 09, 21, 00, 00);

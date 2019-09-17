@@ -1,5 +1,6 @@
 ﻿using System;
-using SportHalls.StrategyPattern.InventorRent.Tennis;
+using SportHalls.StrategyPattern.AdvertisementStrategies;
+using SportHalls.StrategyPattern.RentStrategies.Inventor.Tennis;
 using Xunit;
 
 namespace SportHalls.StrategyPattern.Tests.Inventor
@@ -11,7 +12,7 @@ namespace SportHalls.StrategyPattern.Tests.Inventor
         [InlineData(21, 30, 23, 00, 4.5)]
         public void TennisRacketRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
-            IRentable racket = new InventorRent.Inventor(new TennisRacketRentStrategy());
+            IRentable racket = new StrategyPattern.Inventor(new TennisRacketRentStrategy());
             var cost = racket.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
@@ -23,7 +24,7 @@ namespace SportHalls.StrategyPattern.Tests.Inventor
         [InlineData(21, 30, 23, 00, 3.6)]
         public void TennisBallsRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
-            IRentable balls = new InventorRent.Inventor(new TennisBallsRentStrategy());
+            IRentable balls = new StrategyPattern.Inventor(new TennisBallsRentStrategy());
             var cost = balls.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
@@ -35,7 +36,7 @@ namespace SportHalls.StrategyPattern.Tests.Inventor
         [InlineData(21, 30, 23, 00, 9)]
         public void TennisBallMachineRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
-            IRentable machine = new InventorRent.Inventor(new TennisBallsMachineRentStrategy());
+            IRentable machine = new StrategyPattern.Inventor(new TennisBallsMachineRentStrategy());
             var cost = machine.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 

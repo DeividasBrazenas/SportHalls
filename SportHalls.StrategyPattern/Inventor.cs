@@ -1,6 +1,7 @@
 ﻿using System;
+using SportHalls.StrategyPattern.RentStrategies;
 
-namespace SportHalls.StrategyPattern.InventorRent
+namespace SportHalls.StrategyPattern
 {
     public class Inventor : IRentable
     {

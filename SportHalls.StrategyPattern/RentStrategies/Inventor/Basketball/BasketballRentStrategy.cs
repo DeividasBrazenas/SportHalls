@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace SportHalls.StrategyPattern.HallRent.Basketball
+namespace SportHalls.StrategyPattern.RentStrategies.Inventor.Basketball
 {
-    public class BasketballHallRentStrategy : IRentStrategy
+    public class BasketballRentStrategy : IRentStrategy
     {
         public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
 
-            return rentTimeLength * 0.1;
+            return rentTimeLength * 0.03;
         }
 
         public double AdjustCostForMembers(double cost)

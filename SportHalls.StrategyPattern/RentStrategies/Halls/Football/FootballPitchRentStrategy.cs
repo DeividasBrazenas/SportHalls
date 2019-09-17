@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SportHalls.StrategyPattern.HallRent.Football
+namespace SportHalls.StrategyPattern.RentStrategies.Halls.Football
 {
     public class FootballPitchRentStrategy : IRentStrategy
     {
