@@ -6,9 +6,14 @@ namespace SportHalls.TemplatePattern.Halls
     {
         public abstract double CalculateSpecificHallRentCost(DateTime startDateTime, DateTime endDateTime);
 
+        public abstract double AdjustCostForMembers(double cost);
+
         public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
         {
-            return CalculateSpecificHallRentCost(startDateTime, endDateTime);
+            var cost = CalculateSpecificHallRentCost(startDateTime, endDateTime);
+
+            return AdjustCostForMembers(cost);
         }
+
     }
 }

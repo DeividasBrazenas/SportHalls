@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SportHalls.TemplatePattern.Halls
+namespace SportHalls.TemplatePattern.Halls.Basketball
 {
     public class BasketballHall : Hall
     {
@@ -9,6 +9,11 @@ namespace SportHalls.TemplatePattern.Halls
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
 
             return rentTimeLength * 0.1;
+        }
+
+        public override double AdjustCostForMembers(double cost)
+        {
+            return cost;
         }
     }
 }

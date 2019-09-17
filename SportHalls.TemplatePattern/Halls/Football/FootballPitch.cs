@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SportHalls.TemplatePattern.Halls
+namespace SportHalls.TemplatePattern.Halls.Football
 {
     public class FootballPitch : Hall
     {
@@ -9,6 +9,11 @@ namespace SportHalls.TemplatePattern.Halls
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
 
             return startDateTime.Hour <= 19 ? rentTimeLength * 0.1 : rentTimeLength * 0.05;
+        }
+
+        public override double AdjustCostForMembers(double cost)
+        {
+            return cost;
         }
     }
 }

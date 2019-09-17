@@ -1,10 +1,12 @@
 using System;
-using SportHalls.TemplatePattern.Halls;
+using SportHalls.TemplatePattern.Halls.Basketball;
+using SportHalls.TemplatePattern.Halls.Football;
+using SportHalls.TemplatePattern.Halls.Tennis;
 using Xunit;
 
 namespace SportHalls.TemplatePattern.Tests
 {
-    public class HallsUnitTests
+    public class HallUnitTests
     {
         [Theory]
         [InlineData(19, 00, 21, 00, 24)]
@@ -15,7 +17,7 @@ namespace SportHalls.TemplatePattern.Tests
             var cost = tennisCourt.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
-            Assert.Equal(expectedCost, cost);
+            Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));
         }
 
         [Theory]
@@ -27,7 +29,7 @@ namespace SportHalls.TemplatePattern.Tests
             var cost = basketballHall.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
-            Assert.Equal(expectedCost, cost);
+            Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));
         }
 
         [Theory]
@@ -39,7 +41,7 @@ namespace SportHalls.TemplatePattern.Tests
             var cost = footballPitch.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
-            Assert.Equal(expectedCost, cost);
+            Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));
         }
     }
 }
