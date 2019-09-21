@@ -2,8 +2,12 @@
 
 namespace SportHalls.TemplatePattern.Halls.Basketball
 {
-    public class BasketballHall : Hall
+    public class BasketballHallPassiveAdvertisement : Hall
     {
+        public BasketballHallPassiveAdvertisement(bool isIndoor) : base(isIndoor)
+        {
+        }
+
         public override double CalculateSpecificHallRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
@@ -14,6 +18,13 @@ namespace SportHalls.TemplatePattern.Halls.Basketball
         public override double AdjustCostForMembers(double cost)
         {
             return cost;
+        }
+
+        public override double CalculateSpecificHallAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
+        {
+            var advertisementTimeLength = (endDateTime - startDateTime).TotalDays;
+
+            return advertisementTimeLength * 40;
         }
     }
 }

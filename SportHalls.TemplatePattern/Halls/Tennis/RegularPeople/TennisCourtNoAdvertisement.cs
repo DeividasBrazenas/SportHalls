@@ -1,9 +1,13 @@
 ﻿using System;
 
-namespace SportHalls.TemplatePattern.Halls.Tennis
+namespace SportHalls.TemplatePattern.Halls.Tennis.RegularPeople
 {
-    public class TennisCourtForMembers : Hall
+    public class TennisCourtNoAdvertisement : Hall
     {
+        public TennisCourtNoAdvertisement(bool isIndoor) : base(isIndoor)
+        {
+        }
+
         public override double CalculateSpecificHallRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
@@ -13,7 +17,12 @@ namespace SportHalls.TemplatePattern.Halls.Tennis
 
         public override double AdjustCostForMembers(double cost)
         {
-            return cost * 0.95;
+            return cost;
+        }
+
+        public override double CalculateSpecificHallAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
+        {
+            return 0;
         }
     }
 }
