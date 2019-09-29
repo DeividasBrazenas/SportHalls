@@ -1,6 +1,6 @@
 ﻿using System;
 using SportHalls.TemplatePattern.Halls.Basketball;
-using SportHalls.TemplatePattern.Halls.Tennis.Members;
+using SportHalls.TemplatePattern.Halls.Tennis;
 using Xunit;
 
 namespace SportHalls.TemplatePattern.Tests.Advertisements
@@ -13,7 +13,7 @@ namespace SportHalls.TemplatePattern.Tests.Advertisements
         public void TennisCourtPassiveAdvertisementTest(int startMonth, int startDay, int endMonth, int endDay, double expectedCost)
         {
             IAdvertisable tennisCourt = new TennisCourtForMembersPassiveAdvertisement(false);
-            var cost = tennisCourt.CalculateAdvertisementCost(new DateTime(2019, startMonth, startDay, 0, 0, 00),
+            var cost = tennisCourt.CalculateTotalAdvertisementCost(new DateTime(2019, startMonth, startDay, 0, 0, 00),
                 new DateTime(2019, endMonth, endDay, 0, 0, 00));
 
             Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));
@@ -25,7 +25,7 @@ namespace SportHalls.TemplatePattern.Tests.Advertisements
         public void BasketballHallPassiveAdvertisementTest(int startMonth, int startDay, int endMonth, int endDay, double expectedCost)
         {
             IAdvertisable basketballHall = new BasketballHallPassiveAdvertisement(false);
-            var cost = basketballHall.CalculateAdvertisementCost(new DateTime(2019, startMonth, startDay, 0, 0, 00),
+            var cost = basketballHall.CalculateTotalAdvertisementCost(new DateTime(2019, startMonth, startDay, 0, 0, 00),
                 new DateTime(2019, endMonth, endDay, 0, 0, 00));
 
             Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));

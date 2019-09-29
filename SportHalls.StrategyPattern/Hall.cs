@@ -17,7 +17,7 @@ namespace SportHalls.StrategyPattern
             _advertisementStrategy = advertisementStrategy ?? new NoAdvertisementStrategy();
         }
 
-        public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
+        public double CalculateTotalRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             var cost = _rentStrategy.CalculateRentCost(startDateTime, endDateTime);
 
@@ -26,7 +26,7 @@ namespace SportHalls.StrategyPattern
             return _rentStrategy.AdjustCost(cost);
         }
 
-        public double CalculateAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
+        public double CalculateTotalAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
         {
             return _advertisementStrategy.CalculateAdvertisementCost(startDateTime, endDateTime);
         }

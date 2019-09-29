@@ -16,8 +16,8 @@ namespace SportHalls.StrategyPattern
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
 
-            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateTotalRentCost(startTime, endTime)}");
 
             Console.WriteLine("\n----------------------------------------------------------\n");
 
@@ -29,8 +29,8 @@ namespace SportHalls.StrategyPattern
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
 
-            Console.WriteLine($"Tennis court (member) rent price - {tennisCourt.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Basketball hall (member) rent price - {basketballHall.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis court (member) rent price - {tennisCourt.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball hall (member) rent price - {basketballHall.CalculateTotalRentCost(startTime, endTime)}");
 
             Console.WriteLine("\n----------------------------------------------------------\n");
 
@@ -44,10 +44,10 @@ namespace SportHalls.StrategyPattern
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
 
-            Console.WriteLine($"Basketball rent price - {basketball.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Tennis balls rent price - {tennisBalls.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Tennis balls machine rent price - {tennisBallsMachine.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Tennis racket rent price - {tennisRacket.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball rent price - {basketball.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis balls rent price - {tennisBalls.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis balls machine rent price - {tennisBallsMachine.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis racket rent price - {tennisRacket.CalculateTotalRentCost(startTime, endTime)}");
            
             Console.ReadKey();
         }

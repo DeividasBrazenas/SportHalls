@@ -1,7 +1,6 @@
 ﻿using System;
 using SportHalls.TemplatePattern.Halls.Basketball;
-using SportHalls.TemplatePattern.Halls.Tennis.Members;
-using SportHalls.TemplatePattern.Halls.Tennis.RegularPeople;
+using SportHalls.TemplatePattern.Halls.Tennis;
 using SportHalls.TemplatePattern.Inventor.Basketball;
 using SportHalls.TemplatePattern.Inventor.Tennis;
 
@@ -18,8 +17,8 @@ namespace SportHalls.TemplatePattern
             var endTime = new DateTime(2019, 05, 09, 21, 00, 00);
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
-            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis court rent price - {tennisCourt.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball hall rent price - {basketballHall.CalculateTotalRentCost(startTime, endTime)}");
 
             Console.WriteLine("\n----------------------------------------------------------\n");
 
@@ -31,8 +30,8 @@ namespace SportHalls.TemplatePattern
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
 
-            Console.WriteLine($"Tennis court (member) rent price - {tennisCourtForMembers.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Basketball hall (member) rent price - {basketballHallForMembers.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis court (member) rent price - {tennisCourtForMembers.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball hall (member) rent price - {basketballHallForMembers.CalculateTotalRentCost(startTime, endTime)}");
 
             Console.WriteLine("\n----------------------------------------------------------\n");
 
@@ -46,10 +45,10 @@ namespace SportHalls.TemplatePattern
 
             Console.WriteLine($"Start time - {startTime:yyyy-mm-dd HH:mm}. End time - {endTime:yyyy-mm-dd HH:mm}");
 
-            Console.WriteLine($"Basketball rent price - {basketball.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Tennis balls rent price - {tennisBalls.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Tennis balls machine rent price - {tennisBallsMachine.CalculateRentCost(startTime, endTime)}");
-            Console.WriteLine($"Tennis racket rent price - {tennisRacket.CalculateRentCost(startTime, endTime)}");
+            Console.WriteLine($"Basketball rent price - {basketball.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis balls rent price - {tennisBalls.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis balls machine rent price - {tennisBallsMachine.CalculateTotalRentCost(startTime, endTime)}");
+            Console.WriteLine($"Tennis racket rent price - {tennisRacket.CalculateTotalRentCost(startTime, endTime)}");
         }
     }
 }

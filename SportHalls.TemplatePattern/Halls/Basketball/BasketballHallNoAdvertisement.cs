@@ -8,19 +8,19 @@ namespace SportHalls.TemplatePattern.Halls.Basketball
         {
         }
 
-        public override double CalculateSpecificHallRentCost(DateTime startDateTime, DateTime endDateTime)
+        public override double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
 
             return rentTimeLength * 0.1;
         }
 
-        public override double AdjustCostForMembers(double cost)
+        public override double AdjustCost(double cost)
         {
             return cost;
         }
 
-        public override double CalculateSpecificHallAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
+        public override double CalculateAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
         {
             return 0;
         }

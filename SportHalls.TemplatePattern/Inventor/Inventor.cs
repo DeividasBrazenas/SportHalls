@@ -8,7 +8,7 @@ namespace SportHalls.TemplatePattern.Inventor
 
         public abstract double AdjustCostForMembers(double cost);
 
-        public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
+        public double CalculateTotalRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             var cost = CalculateSpecificItemRentCost(startDateTime, endDateTime);
 

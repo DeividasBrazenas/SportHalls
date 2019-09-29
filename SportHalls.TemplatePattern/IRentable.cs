@@ -4,6 +4,6 @@ namespace SportHalls.TemplatePattern
 {
     public interface IRentable
     {
-        double CalculateRentCost(DateTime startDateTime, DateTime endDateTime);
+        double CalculateTotalRentCost(DateTime startDateTime, DateTime endDateTime);
     }
 }

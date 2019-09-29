@@ -12,7 +12,7 @@ namespace SportHalls.StrategyPattern
             _rentStrategy = rentStrategy;
         }
 
-        public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
+        public double CalculateTotalRentCost(DateTime startDateTime, DateTime endDateTime)
         {
             return _rentStrategy.CalculateRentCost(startDateTime, endDateTime);
         }

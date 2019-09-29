@@ -4,6 +4,6 @@ namespace SportHalls.StrategyPattern
 {
     public interface IAdvertisable
     {
-        double CalculateAdvertisementCost(DateTime startDateTime, DateTime endDateTime);
+        double CalculateTotalAdvertisementCost(DateTime startDateTime, DateTime endDateTime);
     }
 }

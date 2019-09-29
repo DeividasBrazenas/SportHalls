@@ -11,24 +11,24 @@ namespace SportHalls.TemplatePattern.Halls
             _isIndoor = isIndoor;
         }
 
-        public abstract double CalculateSpecificHallRentCost(DateTime startDateTime, DateTime endDateTime);
+        public abstract double CalculateRentCost(DateTime startDateTime, DateTime endDateTime);
 
-        public abstract double AdjustCostForMembers(double cost);
+        public abstract double AdjustCost(double cost);
 
-        public abstract double CalculateSpecificHallAdvertisementCost(DateTime startDateTime, DateTime endDateTime);
+        public abstract double CalculateAdvertisementCost(DateTime startDateTime, DateTime endDateTime);
 
-        public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
+        public double CalculateTotalRentCost(DateTime startDateTime, DateTime endDateTime)
         {
-            var cost = CalculateSpecificHallRentCost(startDateTime, endDateTime);
+            var cost = CalculateRentCost(startDateTime, endDateTime);
 
             cost = _isIndoor ? cost * 1.5 : cost;
 
-            return AdjustCostForMembers(cost);
+            return AdjustCost(cost);
         }
 
-        public double CalculateAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
+        public double CalculateTotalAdvertisementCost(DateTime startDateTime, DateTime endDateTime)
         {
-            return CalculateSpecificHallAdvertisementCost(startDateTime, endDateTime);
+            return CalculateAdvertisementCost(startDateTime, endDateTime);
         }
     }
 }

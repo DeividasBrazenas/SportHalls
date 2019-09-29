@@ -12,7 +12,7 @@ namespace SportHalls.StrategyPattern.Tests.Inventor
         public void BasketballRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             IRentable basketball = new StrategyPattern.Inventor(new VeryCheapRentStrategy());
-            var cost = basketball.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
+            var cost = basketball.CalculateTotalRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
             Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));

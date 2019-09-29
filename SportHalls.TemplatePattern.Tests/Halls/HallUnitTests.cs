@@ -1,6 +1,6 @@
 using System;
 using SportHalls.TemplatePattern.Halls.Basketball;
-using SportHalls.TemplatePattern.Halls.Tennis.RegularPeople;
+using SportHalls.TemplatePattern.Halls.Tennis;
 using Xunit;
 
 namespace SportHalls.TemplatePattern.Tests.Halls
@@ -13,7 +13,7 @@ namespace SportHalls.TemplatePattern.Tests.Halls
         public void TennisCourtRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             IRentable tennisCourt = new TennisCourtAggressiveAdvertisement(false);
-            var cost = tennisCourt.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
+            var cost = tennisCourt.CalculateTotalRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
             Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));
@@ -25,7 +25,7 @@ namespace SportHalls.TemplatePattern.Tests.Halls
         public void BasketballHallRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             IRentable basketballHall = new BasketballHallAggressiveAdvertisement(true);
-            var cost = basketballHall.CalculateRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
+            var cost = basketballHall.CalculateTotalRentCost(new DateTime(2019, 09, 05, startHours, startMinutes, 00),
                 new DateTime(2019, 09, 05, endHours, endMinutes, 00));
 
             Assert.Equal(Math.Round(expectedCost, 2), Math.Round(cost, 2));
