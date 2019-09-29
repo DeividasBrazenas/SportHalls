@@ -23,7 +23,7 @@ namespace SportHalls.StrategyPattern
 
             cost = _isIndoor ? cost * 1.5 : cost;
 
-            return _rentStrategy.AdjustCostForMembers(cost);
+            return _rentStrategy.AdjustCost(cost);
         }
 
         public double CalculateAdvertisementCost(DateTime startDateTime, DateTime endDateTime)

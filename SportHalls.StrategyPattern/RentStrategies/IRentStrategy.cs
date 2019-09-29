@@ -6,6 +6,6 @@ namespace SportHalls.StrategyPattern.RentStrategies
     {
         double CalculateRentCost(DateTime startDateTime, DateTime endDateTime);
 
-        double AdjustCostForMembers(double cost);
+        double AdjustCost(double cost);
     }
 }

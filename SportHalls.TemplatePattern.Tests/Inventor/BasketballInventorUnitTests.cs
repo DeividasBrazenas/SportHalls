@@ -7,8 +7,8 @@ namespace SportHalls.TemplatePattern.Tests.Inventor
     public class BasketballInventorUnitTests
     {
         [Theory]
-        [InlineData(19, 00, 21, 00, 3.6)]
-        [InlineData(21, 30, 23, 00, 2.7)]
+        [InlineData(19, 00, 21, 00, 6)]
+        [InlineData(21, 30, 23, 00, 4.5)]
         public void BasketballRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             IRentable basketball = new Basketball();

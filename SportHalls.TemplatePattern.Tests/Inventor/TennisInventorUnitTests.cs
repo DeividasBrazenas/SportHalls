@@ -7,8 +7,8 @@ namespace SportHalls.TemplatePattern.Tests.Inventor
     public class TennisInventorUnitTests
     {
         [Theory]
-        [InlineData(19, 00, 21, 00, 6)]
-        [InlineData(21, 30, 23, 00, 4.5)]
+        [InlineData(19, 00, 21, 00, 12)]
+        [InlineData(21, 30, 23, 00, 9)]
         public void TennisRacketRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             IRentable racket = new TennisRacket();
@@ -19,8 +19,8 @@ namespace SportHalls.TemplatePattern.Tests.Inventor
         }
 
         [Theory]
-        [InlineData(19, 00, 21, 00, 4.8)]
-        [InlineData(21, 30, 23, 00, 3.6)]
+        [InlineData(19, 00, 21, 00, 12)]
+        [InlineData(21, 30, 23, 00, 9)]
         public void TennisBallsRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             IRentable balls = new TennisBalls();
@@ -31,8 +31,8 @@ namespace SportHalls.TemplatePattern.Tests.Inventor
         }
 
         [Theory]
-        [InlineData(19, 00, 21, 00, 12)]
-        [InlineData(21, 30, 23, 00, 9)]
+        [InlineData(19, 00, 21, 00, 6)]
+        [InlineData(21, 30, 23, 00, 4.5)]
         public void TennisBallMachineRentTest(int startHours, int startMinutes, int endHours, int endMinutes, double expectedCost)
         {
             IRentable machine = new TennisBallsMachine();

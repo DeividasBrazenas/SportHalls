@@ -8,7 +8,7 @@ namespace SportHalls.TemplatePattern.Inventor.Basketball
         {
             var rentTimeLength = (endDateTime - startDateTime).TotalMinutes;
 
-            return rentTimeLength * 0.03;
+            return rentTimeLength * 0.05;
         }
 
         public override double AdjustCostForMembers(double cost)

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace SportHalls.StrategyPattern.RentStrategies.Halls.Basketball
+namespace SportHalls.StrategyPattern.RentStrategies
 {
-    public class BasketballHallMemberRentStrategy : IRentStrategy
+    public class CheapMemberRentStrategy : IRentStrategy
     {
         public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
         {
@@ -11,7 +11,7 @@ namespace SportHalls.StrategyPattern.RentStrategies.Halls.Basketball
             return rentTimeLength * 0.1;
         }
 
-        public double AdjustCostForMembers(double cost)
+        public double AdjustCost(double cost)
         {
             return cost * 0.8;
         }
