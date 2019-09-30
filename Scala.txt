@@ -1,0 +1,74 @@
+import java.time.Duration
+import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit
+
+object demo {
+  def main(args:Array[String]): Unit = {
+    var basketballHall = new Hall(false) with CheapRentStrategy with PassiveAdvertisementStrategy
+    println(basketballHall.CalculateRentCost(LocalDateTime.of(2019, 10, 1, 20, 0, 0), LocalDateTime.of(2019, 10, 1, 22, 0, 0)))
+  }
+}
+
+abstract class Hall(isIndoor: Boolean){
+  var _isIndoor = isIndoor
+  
+  def CalculateTotalRentCost(startDate: LocalDateTime, endDate: LocalDateTime): Double
+  def CalculateTotalAdvertisementCost(startDate: LocalDateTime, endDate: LocalDateTime): Double
+  def AdjustCost(cost: Double): Double
+  
+  def CalculateRentCost(startDate: LocalDateTime, endDate: LocalDateTime): Double = {
+    var cost = CalculateTotalRentCost(startDate, endDate);
+    
+    if(_isIndoor){
+      cost = cost * 1.5;
+    }
+    
+    return AdjustCost(cost);
+  }
+  
+  def CalculateAdvertisementCost(startDate: LocalDateTime, endDate: LocalDateTime): Double = {
+    return CalculateTotalAdvertisementCost(startDate, endDate);
+  }
+}
+
+// Rent traits
+trait CheapRentStrategy extends Hall {
+  override def CalculateTotalRentCost(startDate: LocalDateTime, endDate: LocalDateTime): Double = {
+    var rentTimeLength: Long = Duration.between(startDate, endDate).toMinutes();
+    
+    return rentTimeLength * 0.1;
+  }
+  
+  override def AdjustCost(cost: Double): Double = {
+    return cost;
+  }
+}
+
+trait ExpensiveMemberRentStrategy extends Hall {
+  override def CalculateTotalRentCost(startDate: LocalDateTime, endDate: LocalDateTime): Double = {
+    var rentTimeLength: Long = Duration.between(startDate, endDate).toMinutes();
+    
+    return rentTimeLength * 0.2;
+  }
+  
+  override def AdjustCost(cost: Double): Double = {
+    return cost * 0.8;
+  }
+}
+
+// Advertisement traits
+trait AggressiveAdvertisementStrategy extends Hall {
+  override def CalculateTotalAdvertisementCost(startDate: LocalDateTime, endDate: LocalDateTime): Double = {
+    var advertisementTimeLength: Long = Duration.between(startDate, endDate).toDays();
+    
+    return advertisementTimeLength * 100;
+  }
+}
+
+trait PassiveAdvertisementStrategy extends Hall {
+  override def CalculateTotalAdvertisementCost(startDate: LocalDateTime, endDate: LocalDateTime): Double = {
+    var advertisementTimeLength: Long = Duration.between(startDate, endDate).toDays();
+    
+    return advertisementTimeLength * 40;
+  }
+}
