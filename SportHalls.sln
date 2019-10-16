@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.StrategyPattern", "SportHalls.StrategyPattern\SportHalls.StrategyPattern.csproj", "{7598F8F5-40EA-47A8-863B-828EACA535E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.StrategyPattern.Tests", "SportHalls.StrategyPattern.Tests\SportHalls.StrategyPattern.Tests.csproj", "{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.StrategyPattern.Tests", "SportHalls.StrategyPattern.Tests\SportHalls.StrategyPattern.Tests.csproj", "{8D3BA29C-09AE-4E1C-B750-098CEE6921A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.TemplatePattern", "SportHalls.TemplatePattern\SportHalls.TemplatePattern.csproj", "{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.TemplatePattern", "SportHalls.TemplatePattern\SportHalls.TemplatePattern.csproj", "{A013DA3D-DB1E-4B2F-8015-B14E8986A84B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.TemplatePattern.Tests", "SportHalls.TemplatePattern.Tests\SportHalls.TemplatePattern.Tests.csproj", "{88A08D1E-DA8A-4DE1-975E-877F3ACCD0B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.TemplatePattern.Tests", "SportHalls.TemplatePattern.Tests\SportHalls.TemplatePattern.Tests.csproj", "{88A08D1E-DA8A-4DE1-975E-877F3ACCD0B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportHalls.Mixin", "SportHalls.Mixin\SportHalls.Mixin.csproj", "{8946601D-0C47-4738-BC71-662A498D9AB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportHalls.Mixin.Tests", "SportHalls.Mixin.Tests\SportHalls.Mixin.Tests.csproj", "{2F4FA812-29BD-4016-8531-24439B15CA20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{88A08D1E-DA8A-4DE1-975E-877F3ACCD0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88A08D1E-DA8A-4DE1-975E-877F3ACCD0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88A08D1E-DA8A-4DE1-975E-877F3ACCD0B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8946601D-0C47-4738-BC71-662A498D9AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8946601D-0C47-4738-BC71-662A498D9AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8946601D-0C47-4738-BC71-662A498D9AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8946601D-0C47-4738-BC71-662A498D9AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4FA812-29BD-4016-8531-24439B15CA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4FA812-29BD-4016-8531-24439B15CA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4FA812-29BD-4016-8531-24439B15CA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4FA812-29BD-4016-8531-24439B15CA20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

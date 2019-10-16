@@ -8,7 +8,7 @@ namespace SportHalls.StrategyPattern
     {
         static void Main()
         {
-            IRentable tennisCourt = new Hall(new ExpensiveRentStrategy(), true, new AggressiveAdvertisementStrategy());
+            IRentable tennisCourt = new Hall(new ExpensiveMemberRentStrategy(), true, new AggressiveAdvertisementStrategy());
             IRentable basketballHall = new Hall(new CheapRentStrategy(), true, new AggressiveAdvertisementStrategy());
 
             var startTime = new DateTime(2019, 05, 09, 19, 00, 00);
@@ -22,7 +22,7 @@ namespace SportHalls.StrategyPattern
             Console.WriteLine("\n----------------------------------------------------------\n");
 
             tennisCourt = new Hall(new ExpensiveMemberRentStrategy(), false);
-            basketballHall = new Hall(new CheapMemberRentStrategy(), false);
+            basketballHall = new Hall(new CheapRentStrategy(), false);
 
             startTime = new DateTime(2019, 05, 09, 21, 30, 00);
             endTime = new DateTime(2019, 05, 09, 23, 00, 00);
@@ -34,10 +34,10 @@ namespace SportHalls.StrategyPattern
 
             Console.WriteLine("\n----------------------------------------------------------\n");
 
-            IRentable basketball = new Inventor(new CheapRentStrategy());
-            IRentable tennisBalls = new Inventor(new CheapMemberRentStrategy());
-            IRentable tennisBallsMachine = new Inventor(new VeryCheapRentStrategy());
-            IRentable tennisRacket = new Inventor(new VeryCheapMemberRentStrategy());
+            var basketball = new Inventor(new CheapRentStrategy());
+            var tennisBalls = new Inventor(new CheapRentStrategy());
+            var tennisBallsMachine = new Inventor(new CheapRentStrategy());
+            var tennisRacket = new Inventor(new CheapRentStrategy());
 
             startTime = new DateTime(2019, 05, 09, 13, 30, 00);
             endTime = new DateTime(2019, 05, 09, 16, 00, 00);

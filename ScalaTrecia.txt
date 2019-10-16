@@ -1,0 +1,90 @@
+import java.time.Duration
+import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit
+
+object demo {
+  def main(args: Array[String]): Unit = {
+    var hall = new Hall(7) with ImprovementStrategy with RentStrategy
+    var item = new Inventor(3) with ExpensesStrategy
+    var employee = new Employee(20)
+
+    println(hall.Entertain())
+    println(hall.ImprovementCost(hall._quality))
+    println(
+      hall.RentCost(
+        LocalDateTime.of(2019, 10, 1, 20, 0, 0),
+        LocalDateTime.of(2019, 10, 1, 22, 0, 0)
+      )
+    )
+    println(
+      item.CalculateExpenses(
+        LocalDateTime.of(2019, 10, 1, 20, 0, 0),
+        LocalDateTime.of(2019, 10, 1, 22, 0, 0)
+      )
+    )
+    println(item.MakeSound())
+    println(employee.Clean(hall))
+    println(employee.Fix(item))
+  }
+}
+
+class Hall(quality: Int) {
+  var _quality = quality
+
+  def Entertain() = {
+    println("The hall is entertaining you")
+  }
+}
+
+class Inventor(quality: Int) {
+  var _quality = quality
+
+  def MakeSound() = {
+    println("Badum tss")
+  }
+}
+
+class Employee(age: Int) {
+  var _age = age
+
+  def Clean(hall: Hall) = {
+    if (hall._quality < 6) {
+      println("Hall is really dirty. Hard to clean all the mess");
+    } else {
+      println("Hall looks pretty good");
+    }
+  }
+
+  def Fix(item: Inventor) = {
+    if (item._quality < 8) {
+      println("Inventor item is damaged a little bit");
+    } else {
+      println("All good with the item");
+    }
+  }
+}
+
+trait RentStrategy {
+  def RentCost(startDate: LocalDateTime, endDate: LocalDateTime): Double = {
+    var rentTimeLength: Long = Duration.between(startDate, endDate).toMinutes();
+
+    return rentTimeLength * 2;
+  }
+}
+
+trait ImprovementStrategy {
+  def ImprovementCost(quality: Int): Double = {
+    return quality * 5;
+  }
+}
+
+trait ExpensesStrategy {
+  def CalculateExpenses(
+      startDate: LocalDateTime,
+      endDate: LocalDateTime
+  ): Double = {
+    var rentTimeLength: Long = Duration.between(startDate, endDate).toMinutes();
+
+    return rentTimeLength / 3;
+  }
+}

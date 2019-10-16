@@ -1,8 +1,8 @@
-﻿using System;
-
-namespace SportHalls.StrategyPattern.RentStrategies
+﻿namespace SportHalls.TemplatePattern.RentStrategies
 {
-    public class CheapRentStrategy : IRentStrategy
+    using System;
+
+    public class CheapRentStrategy
     {
         public double CalculateRentCost(DateTime startDateTime, DateTime endDateTime)
         {
